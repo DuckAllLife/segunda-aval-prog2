@@ -1,2 +1,2 @@
-# segunda-aval-prog2
-Segunda Avaliação de Programação II - Programação Orientada a Objetos utilizando a linguagem de programação Dart
+A sample command-line application with an entrypoint in `bin/`, library code
+in `lib/`, and example unit test in `test/`.

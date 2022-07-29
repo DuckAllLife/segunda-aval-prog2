@@ -2,12 +2,11 @@ import 'dart:io';
 
 abstract class Data {
   
-  late String content;
-  late File outFile;
+  late final String content;
 
   void load(String fileName) => content = File(fileName).readAsStringSync();
 
-  void save(String fileName) => outFile = File('example_csv_out.csv');
+  void save(String fileName) => File(fileName).writeAsStringSync(content);
 
   void clear();
 
@@ -15,7 +14,7 @@ abstract class Data {
 
   String get data;
 
-  set data(x);
+  set data(String x);
 
   List<String> get fields;
 

@@ -14,11 +14,10 @@ class CsvData extends DelimitedData {
   List<String> get fields => lines[0].split(separator);
 
   @override
-  void clear() => lines = [];
+  void clear() => lines.clear();
   
   @override
   String get data => lines.toString();
 
-  @override
   set data(String data) => lines.add(data);
 }

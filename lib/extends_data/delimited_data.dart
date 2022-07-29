@@ -3,7 +3,8 @@ import '../data.dart';
 
 abstract class DelimitedData extends Data{
   
-  late List<String> lines;
+  late final List<String> lines = content.split('\n');
 
   String get separator;
-}
+  
+} 

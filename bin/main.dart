@@ -1,6 +1,5 @@
 
-import 'package:dart_dataprog2/data.dart';
-import 'package:dart_dataprog2/extends_data/extends_delimeted_data/csv_data.dart';
+import 'package:dart_dataprog2/extends_data/extends_delimeted_data/tsv_data.dart';
 
 void main() {
   
@@ -13,7 +12,7 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-  CsvData test = CsvData();
+  TsvData test = TsvData();
   test.load('example_files/example_csv.csv');
 
   print(test.separator);

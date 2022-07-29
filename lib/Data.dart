@@ -1,9 +1,12 @@
+import 'dart:io';
 
 abstract class Data {
   
-  void load(String fileName);
+  late final String content;
 
-  void save(String fileName);
+  void load(String fileName) => content = File(fileName).readAsStringSync();
+
+  void save(String fileName) => File(fileName).writeAsStringSync(content);
 
   void clear();
 
@@ -11,7 +14,7 @@ abstract class Data {
 
   String get data;
 
-  set data(x);
+  set data(String x);
 
   List<String> get fields;
 

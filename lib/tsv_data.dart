@@ -1,9 +1,6 @@
-
-//import 'package:dart_dataprog2/extends_data/delimited_data.dart';
 import 'delimited_data.dart';
 
-class TsvData extends DelimitedData{
-
+class TsvData extends DelimitedData {
   TsvData();
 
   @override
@@ -17,11 +14,10 @@ class TsvData extends DelimitedData{
 
   @override
   void clear() => lines.clear();
-  
+
   @override
   String get data => lines.toString();
 
   @override
   set data(String data) => lines.add(data);
-
 }

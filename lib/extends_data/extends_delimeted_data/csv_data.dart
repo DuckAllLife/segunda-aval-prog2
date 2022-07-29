@@ -20,5 +20,5 @@ class CsvData extends DelimitedData {
   String get data => lines.toString();
 
   @override
-  void set data(String data) => lines.add(data);
+  set data(String data) => lines.add(data);
 }

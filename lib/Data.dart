@@ -1,9 +1,13 @@
+import 'dart:io';
 
 abstract class Data {
   
-  void load(String fileName);
+  late String content;
+  late File outFile;
 
-  void save(String fileName);
+  void load(String fileName) => content = File(fileName).readAsStringSync();
+
+  void save(String fileName) => outFile = File('example_csv_out.csv');
 
   void clear();
 

@@ -23,6 +23,8 @@ void main() {
 
   test.clear();
   print(test.data);
+  print(test.lines);
+  print(test.hasData);
 
   test.save('teste.tsv');
 

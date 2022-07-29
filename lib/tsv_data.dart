@@ -1,5 +1,6 @@
 
-import 'package:dart_dataprog2/extends_data/delimited_data.dart';
+//import 'package:dart_dataprog2/extends_data/delimited_data.dart';
+import 'delimited_data.dart';
 
 class TsvData extends DelimitedData{
 

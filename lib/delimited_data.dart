@@ -1,5 +1,5 @@
 
-import '../data.dart';
+import 'Data.dart';
 
 abstract class DelimitedData extends Data{
   

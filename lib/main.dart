@@ -10,7 +10,7 @@ void main() {
   //outFile.writeAsStringSync(content);
 
   TsvData test = TsvData();
-  test.load('lib/teste.tsv');
+  test.load('example_files/example_tsv.tsv');
 
   print(test.separator);
   print(test.hasData);

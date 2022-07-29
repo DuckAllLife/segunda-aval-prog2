@@ -7,10 +7,6 @@ class TsvData extends DelimitedData {
   String get separator => '\t';
 
   @override
-<<<<<<< HEAD
-<<<<<<< HEAD
-  bool get hasData => (lines == []) ? true : false;
-=======
   bool get hasData => (lines.isNotEmpty) ? true : false;
 >>>>>>> e5abcad1431638fb4d30f32057d990e0a11061d2
 =======

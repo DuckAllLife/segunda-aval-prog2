@@ -8,7 +8,7 @@ class CsvData extends DelimitedData {
   String get separator => ',';
 
   @override
-  bool get hasData => (lines != []) ? true : false;
+  bool get hasData => lines.isNotEmpty;
 
   @override
   List<String> get fields => lines[0].split(separator);

@@ -1,4 +1,4 @@
-import 'tsv_data.dart';
+import 'json_data.dart';
 
 void main() {
   //final inFile = File('example_files/example_csv.csv');
@@ -9,21 +9,21 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-  TsvData test = TsvData();
-  test.load('example_files/example_tsv.tsv');
-  print(test.separator);
-  print(test.hasData);
-  print(test.fields);
+  JsonData test = JsonData();
+  test.load('example_files/example_json.json');
+  //print(test.separator);
+  //print(test.hasData);
+  //print(test.fields);
 
-  print(test.data);
+  //print(test.data);
 
-  test.data = 'ARFTGFFSAADSF';
-  print(test.data);
-
+  //test.data = 'ARFTGFFSAADSF';
+  //print(test.data);
+  print(test.content);
   test.clear();
-  print(test.hasData);
+  print(test.content);
 
-  test.save('teste.tsv');
+  test.save('teste.json');
 
   print(
       "\nIntegrantes do Grupo: Celenny Cristhyne do Nascimento Souza, Gabriel Benigno Rocha, Richelle Kim Mota Bahia");

@@ -1,7 +1,7 @@
-id    name    email phone
-1020    Ana Célia Souza   anasouza@email.com    85992219030
-2055    João Alberto de   Lima   limajoao@email.com 86981745823
-3044    Roberto Carlos da Nóbrega  79954180631
-1059    Maria Joana Alencar   majolencar@email.com
-Jeferson Souza Pereira    jefpereira@email.com    54921053678
-7015    desouzaveras@email.com    65930041685
+id/tname/temail/tphone
+1020/tAna Célia Souza/tanasouza@email.com/t85992219030
+2055/tJoão Alberto deLima/tlimajoao@email.com/t86981745823
+3044/tRoberto Carlos da Nóbrega/t79954180631
+1059/tMaria Joana Alencar/tmajolencar@email.com/t
+/tJeferson Souza Pereira/tjefpereira@email.com/t54921053678
+7015/t/tdesouzaveras@email.com/t65930041685 

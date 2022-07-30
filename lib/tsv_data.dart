@@ -1,7 +1,6 @@
 import 'delimited_data.dart';
 
 class TsvData extends DelimitedData {
-  TsvData();
 
   @override
   String get separator => '\t';

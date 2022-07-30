@@ -1,20 +1,19 @@
-import 'dart:io';
 
 abstract class Data {
   
-  late final String content;
+  late String content;
 
-  void load(String fileName) => content = File(fileName).readAsStringSync();
+  void load(String fileName);
 
-  void save(String fileName) => File(fileName).writeAsStringSync(content);
+  void save(String fileName);
 
   void clear();
 
   bool get hasData;
 
-  String get data;
+  String? get data;
 
-  set data(String x);
+  set data(String? x);
 
   List<String> get fields;
 

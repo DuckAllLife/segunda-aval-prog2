@@ -4,13 +4,25 @@ import 'data.dart';
 
 class JsonData extends Data{
 
-  @override
+  dynamic dataJson = [];
+
   void load(String fileName) {
-    final data = jsonDecode(content);
+    content = File(fileName).readAsStringSync();
+    dataJson = (jsonDecode(content));
   }
 
-  @override
   void save(String fileName) {
-    File(fileName).writeAsStringSync(jsonEncode(data));
+    File(fileName).writeAsStringSync(jsonEncode(dataJson));
   }
+
+  void clear() => dataJson.clear();
+
+  bool get hasData => dataJson.isNotEmpty;
+
+  String? get data => hasData ? dataJson.toString() : null;
+
+  set data(String? x) => x != null ? dataJson.insert(dataJson.length, jsonDecode(x)) : dataJson.insert([]);
+
+  List<String> get fields => dataJson[0].keys.toList();
+
 }

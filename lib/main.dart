@@ -11,16 +11,20 @@ void main() {
 
   TsvData test = TsvData();
   test.load('example_files/example_tsv.tsv');
-  print(test.separator);
-  print(test.hasData);
-  print(test.fields);
 
-  print(test.data);
+  print('separador: ${test.separator}');
+  print('hasdada: ${test.hasData}');
+  print('teste fields: ${test.fields}');
 
-  test.data = 'ARFTGFFSAADSF';
-  print(test.data);
+  print('get: ${test.data}');
+
+  test.data = 'ARFTGFFSAADSF'; //set
+  print('get: ${test.data}');
 
   test.clear();
+
+  print('get: ${test.data}');
+  print(test.lines);
   print(test.hasData);
 
   test.save('teste.tsv');

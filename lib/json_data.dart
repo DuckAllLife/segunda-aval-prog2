@@ -6,11 +6,11 @@ class JsonData extends Data{
 
   @override
   void load(String fileName) {
-    content = jsonEncode(File(fileName).readAsStringSync());
+    final data = jsonDecode(content);
   }
 
   @override
   void save(String fileName) {
-    File(fileName).writeAsStringSync(jsonDecode(content));
+    File(fileName).writeAsStringSync(jsonEncode(data));
   }
 }

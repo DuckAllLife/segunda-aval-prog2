@@ -1,4 +1,4 @@
-import 'json_data.dart';
+import 'csv_data.dart';
 
 void main() {
   //final inFile = File('example_files/example_csv.csv');
@@ -9,8 +9,8 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-  JsonData test = JsonData();
-  test.load('example_files/example_json.json');
+  CsvData test = CsvData();
+  test.load('example_files/example_csv.csv');
   //print(test.separator);
   //print(test.hasData);
   //print(test.fields);
@@ -23,7 +23,7 @@ void main() {
   test.clear();
   print(test.content);
 
-  test.save('teste.json');
+  test.save('teste.csv');
 
   print(
       "\nIntegrantes do Grupo: Celenny Cristhyne do Nascimento Souza, Gabriel Benigno Rocha, Richelle Kim Mota Bahia");

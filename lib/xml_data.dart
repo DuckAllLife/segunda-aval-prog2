@@ -1,3 +1,2 @@
-class XmlData {
-  
+class XmlData  {
 }

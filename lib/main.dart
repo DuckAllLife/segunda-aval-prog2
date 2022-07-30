@@ -9,7 +9,6 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-<<<<<<< HEAD
   CsvData test = CsvData();
   test.load('example_files/csv-ex.csv');
   print('Get data ' + test.data);
@@ -25,25 +24,6 @@ void main() {
   test.clear();
   print('has data ${test.data}');
   print('Get data ' + test.data);
-=======
-  TsvData test = TsvData();
-  test.load('example_files/example_tsv.tsv');
-
-  print('separador: ${test.separator}');
-  print('hasdada: ${test.hasData}');
-  print('teste fields: ${test.fields}');
-
-  print('get: ${test.data}');
-
-  test.data = 'ARFTGFFSAADSF'; //set
-  print('get: ${test.data}');
-
-  test.clear();
-
-  print('get: ${test.data}');
-  print(test.lines);
-  print(test.hasData);
->>>>>>> 24e4b005783db07c7dce6c78bb4c8311ffafc80c
 
   test.save('teste.tsv');
 

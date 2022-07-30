@@ -1,7 +1,6 @@
 import 'delimited_data.dart';
 
 class CsvData extends DelimitedData {
-
   CsvData();
 
   @override

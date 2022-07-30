@@ -1,3 +1,3 @@
-class JsonData {
+class JsonData  {
   
 }

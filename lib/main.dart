@@ -1,4 +1,6 @@
 import 'csv_data.dart';
+import 'tsv_data.dart';
+import 'xml_data.dart';
 
 void main() {
   //final inFile = File('example_files/example_csv.csv');
@@ -16,10 +18,10 @@ void main() {
   print('has data ${test.hasData}');
   print('Test fields ${test.fields}');
 
-  print('Get data ' + test.data); // get
+  //print('Get data ' + test.data); // get
 
-  test.data = 'ARFTGFFSAADSF'; // set
-  print('set data ${test.data}');
+  //test.data = 'ARFTGFFSAADSF'; // set
+  //print('set data ${test.data}');
 
   test.clear();
   print('has data ${test.data}');

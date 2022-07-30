@@ -7,11 +7,14 @@ class TsvData extends DelimitedData {
   String get separator => '\t';
 
   @override
+<<<<<<< HEAD
   bool get hasData => (lines.isNotEmpty) ? true : false;
 >>>>>>> e5abcad1431638fb4d30f32057d990e0a11061d2
 =======
+=======
+
+>>>>>>> d9236bec1c91e062f92308d3f699d41f35203032
   bool get hasData => lines.isNotEmpty;
->>>>>>> 1b9d2d890dd3a615049f348542bdbab11cbe57e7
 
   @override
   List<String> get fields => lines[0].split(separator);

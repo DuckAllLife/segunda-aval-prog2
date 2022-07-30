@@ -11,11 +11,6 @@ void main() {
 
   TsvData test = TsvData();
   test.load('example_files/example_tsv.tsv');
-<<<<<<< HEAD
-  print(test.hasData);
-=======
-
->>>>>>> e5abcad1431638fb4d30f32057d990e0a11061d2
   print(test.separator);
   print(test.hasData);
   print(test.fields);
@@ -26,12 +21,6 @@ void main() {
   print(test.data);
 
   test.clear();
-<<<<<<< HEAD
-
-=======
-  print(test.data);
-  print(test.lines);
->>>>>>> e5abcad1431638fb4d30f32057d990e0a11061d2
   print(test.hasData);
 
   test.save('teste.tsv');

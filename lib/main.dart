@@ -21,7 +21,7 @@ void main() {
   test.data = null;
   //print(test.data);
   print(test.data);
-  //test.clear();
+  test.clear();
   print(test.data);
 
   test.save('teste.json');

@@ -13,7 +13,7 @@ abstract class Data {
 
   String? get data;
 
-  set data(String? x);
+  set data(String? receivedData);
 
   List<String> get fields;
 

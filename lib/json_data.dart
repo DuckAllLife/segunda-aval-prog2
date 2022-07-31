@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'data.dart';
+import 'exceptions.dart';
 
-class JsonData extends Data{
-
+class JsonData extends Data {
   dynamic dataJson = [];
 
   void load(String fileName) {
@@ -12,7 +12,8 @@ class JsonData extends Data{
   }
 
   void save(String fileName) {
-    File(fileName).writeAsStringSync(jsonEncode(dataJson));
+    JsonEncoder encoder = JsonEncoder.withIndent('\t');
+    File(fileName).writeAsStringSync(encoder.convert(dataJson));
   }
 
   void clear() => dataJson.clear();
@@ -21,8 +22,23 @@ class JsonData extends Data{
 
   String? get data => hasData ? dataJson.toString() : null;
 
-  set data(String? x) => x != null ? dataJson.insert(dataJson.length, jsonDecode(x)) : dataJson.insert([]);
+  set data(String? receivedData) {
+    if (receivedData != null) {
+      try {
+        if (jsonDecode(receivedData) is! Map) {
+          throw InvalidJsonDataFormat();
+        }
+        else{
+          dataJson.insert(dataJson.length, jsonDecode(receivedData));
+        }
+      } catch (e) {
+        throw InvalidJsonDataFormat();
+      }
+    }
+    else{
+      dataJson.insert(dataJson.length, {});
+    }
+  }
 
   List<String> get fields => dataJson[0].keys.toList();
-
 }

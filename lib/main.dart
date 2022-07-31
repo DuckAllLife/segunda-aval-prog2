@@ -1,4 +1,4 @@
-import 'xml_data.dart';
+import 'imports.dart';
 
 void main() {
   XmlData test = XmlData();

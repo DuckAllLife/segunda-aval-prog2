@@ -1,23 +1,38 @@
-import 'delimited_data.dart';
+part of 'imports.dart';
 
 class TsvData extends DelimitedData {
-  TsvData();
 
-  @override
-  String get separator => '\t';
+  void load(String fileName) {
+    content = File(fileName).readAsStringSync();
+  }
 
-  @override
+   void save(String fileName) {
+    File(fileName).writeAsStringSync(lines.toString());
+  }
+
+  void clear() {
+    lines.clear();
+    hasData;
+  }
+
   bool get hasData => lines.isNotEmpty;
 
-  @override
-  List<String> get fields => lines[0].split(separator);
+  String get separator => '\t';
 
-  @override
-  void clear() => lines.clear();
+  String? get data => hasData ? lines.toString() : null;
 
-  @override
-  String get data => lines.toString();
+  set data(String? receivedData){ 
+    if (receivedData != null) {
+      try {
+        lines.insert(lines.length, receivedData);
+      } catch (e) {
+        throw InvalidTsvDataFormat;
+      }
+    }
+    else{
+      lines.insert(lines.length, 'null');
+    }
+  }
 
-  @override
-  set data(String data) => lines.add(data);
+  List<String> get fields => hasData ? lines[0].split(separator) : [];
 }

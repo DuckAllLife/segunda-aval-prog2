@@ -20,7 +20,7 @@ void main() {
   xml1.element('data', nest: () {
     xml1.element('record', nest: () {
       xml1.attribute('id', '1020');
-      xml1.attribute('name', 'Ana CÃ©lia Cardoso');
+      xml1.attribute('name', 'Ana Cecília Cardoso');
       xml1.attribute('email', 'ana.celia@email.com');
       xml1.attribute('phone', '86994419010');
     });

@@ -1,4 +1,5 @@
 
+import 'csv_data.dart';
 import 'xml_data.dart';
 
 void main() {
@@ -10,8 +11,10 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-  XmlData test=XmlData();
+  XmlData test = XmlData();
+  //CsvData test = CsvData();
   test.load('example_files/example_xml.xml');
+  //print('Test fields ${test.fields}');
   //print('Get data ' + test.data);
   //print('Test separator ' + test.separator);
   //print('has data ${test.hasData}');

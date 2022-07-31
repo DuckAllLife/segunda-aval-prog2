@@ -2,29 +2,40 @@ import 'dart:io';
 import 'package:xml/xml.dart';
 import 'Data.dart';
 
+
 class XmlData extends Data {
-  //loud carrega
+  Map<String, dynamic> mapRecord = {};
+
   @override
-  void load(String fileName) {
-    content = File(fileName).readAsStringSync();
-    final xml = XmlDocument.parse(content);
-    final records = xml.findAllElements('record');
-    print('records ${records}');
-    print('xml ${xml}');
+  void load(xmlfile) {
+    final content = File(xmlfile).readAsStringSync();  // lendo o arquivo
+    final xmlDoc = XmlDocument.parse(content); 
+    final records = xmlDoc.findAllElements('record');
+
+    for (XmlElement record in records){
+
+      for (var element in record.attributes){
+        mapRecord[element.name.toString()] = element.value;
+      }
+      print(mapRecord);
+    }
   }
-
+  
   @override
-  late String data;
+  // TODO: implement data
+  String get data => throw UnimplementedError();
 
+  set data(value) => throw UnimplementedError();
+  
   @override
   void clear() {
     // TODO: implement clear
   }
-
+  
   @override
   // TODO: implement fields
   List<String> get fields => throw UnimplementedError();
-
+  
   @override
   // TODO: implement hasData
   bool get hasData => throw UnimplementedError();

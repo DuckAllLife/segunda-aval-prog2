@@ -10,7 +10,7 @@ void main() {
   //outFile.createSync();
   //outFile.writeAsStringSync(content);
 
-  XmlData test=XmlData();
+  XmlData test =XmlData();
   test.load('example_files/example_xml.xml');
   //print('Get data ' + test.data);
   //print('Test separator ' + test.separator);

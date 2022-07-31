@@ -17,11 +17,11 @@ void main() {
 
   //print(test.data);
 
-  //test.data = '{"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310"}';
-  test.data = null;
+  test.data = '{"id:""", "name:""", "email:""","" "phone:"""}';
+  //test.data = null;
   //print(test.data);
   print(test.data);
-  test.clear();
+  //test.clear();
   print(test.data);
 
   test.save('teste.json');

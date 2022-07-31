@@ -1,4 +1,4 @@
-import 'delimited_data.dart';
+part of 'imports.dart';
 
 class CsvData extends DelimitedData {
 

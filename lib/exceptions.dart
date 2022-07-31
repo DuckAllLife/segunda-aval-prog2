@@ -1,10 +1,9 @@
+part of 'imports.dart';
+
 class Exceptions {
-  
-  dynamic test;
 
   @override
     String toString() => 'Exception Error';
-
   }
 
 class InvalidJsonDataFormat extends Exceptions {

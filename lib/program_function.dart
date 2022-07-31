@@ -22,7 +22,7 @@ void csvFunction(){
   print('Get data: ${test.data}\n');
 
   print('Test clear()');
-  //test.clear();
+  test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
@@ -44,7 +44,7 @@ void tsvFunction(){
   print('Get data: ${test.data}\n');
 
   print('Test clear()');
-  //test.clear();
+  test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
@@ -60,11 +60,11 @@ void jsonFunction(){
   print('has data: ${test.hasData}\n');
 
   print('set data: {"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}\n');
-  //test.data = '{"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}';
+  test.data = '{"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}';
   print('Get data: ${test.data}\n');
 
   print('Test.clear()');
-  //test.clear();
+  test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
@@ -84,7 +84,7 @@ void xmlFunction(){
   print('Get data: ${test.data}\n');
 
   print('Test.clear()');
-  //test.clear();
+  test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 

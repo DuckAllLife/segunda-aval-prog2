@@ -7,7 +7,8 @@ class CsvData extends DelimitedData {
   }
 
   void save(String fileName) {
-    File(fileName).writeAsStringSync(lines.toString());
+    final oldFile = lines.toString().replaceAll('[', '').replaceAll(']', '');
+    File(fileName).writeAsStringSync(oldFile);
   }
 
   void clear() {

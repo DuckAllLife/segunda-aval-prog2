@@ -1,7 +1,7 @@
 part of 'imports.dart';
 
-void programFunctionNoErrors(){
-    print('--------TESTE SEM ERROS-------');
+void programFunction(){
+    print('--------INICIO DOS TESTES-------');
     csvFunction();
     tsvFunction();
     jsonFunction();
@@ -18,15 +18,15 @@ void csvFunction(){
   print('has data: ${test.hasData}\n');
 
   print('set data: "2045,"Leonardo Castro Lopes","leocalopes@email.com","21956482310","206.549.487-78"\n');
-  test.data = '2045,"Leonardo Castro Lopes","leocalopes@email.com","21956482310","206.549.487-78"';
+  test.data = '2045,"Leonardo Castro Lopes","leocalopes@email.com","21956482310"';
   print('Get data: ${test.data}\n');
 
   print('Test clear()');
-  test.clear();
+  //test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
-  test.save('teste.csv');
+  test.save('example_files/example_csv.csv');
 
 }
 
@@ -40,15 +40,15 @@ void tsvFunction(){
   print('has data: ${test.hasData}\n');
 
   print('set data: "2045  "Leonardo Castro Lopes  "leocalopes@email.com"  "21956482310" "206.549.487-78"\n');
-  test.data = '2045 "Leonardo Castro Lopes" "leocalopes@email.com"  "21956482310" "206.549.487-78"';
+  test.data = '2045 "Leonardo Castro Lopes" "leocalopes@email.com"  "21956482310"';
   print('Get data: ${test.data}\n');
 
   print('Test clear()');
-  test.clear();
+  //test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
-  test.save('teste.tsv');
+  test.save('example_files/example_tsv.tsv');
 }
 
 void jsonFunction(){
@@ -64,47 +64,30 @@ void jsonFunction(){
   print('Get data: ${test.data}\n');
 
   print('Test.clear()');
-  test.clear();
+  //test.clear();
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
-  test.save('teste.json');
-}
-
-void xmlFunction(){
-  
-}
-
-void jsonFunctionError(){
-  final test = JsonData();
-  print('-----------JSON DATA---------');
-  test.load('example_files/example_json.json');
-  print('Test fields: ${test.fields}\n');
-  print('Get data: ${test.data}\n');
-  print('has data: ${test.hasData}\n');
-
-  test.data = '12132dasd, adasd12312';
-  print('Get data: ${test.data}\n');
-
-  print('Test.clear()');
-  test.clear();
-  print('has data: ${test.hasData}\n');
-  print('Get data: ${test.data}\n');
-
-  test.save('teste.json');
-  /*
+  test.save('example_files/example_json.json');
 }
 
 void xmlFunction(){
   final test = XmlData();
-  print('-----------XML DATA---------');
-  print(
-      '\nIntegrantes do Grupo: Celenny Cristhyne do Nascimento Souza, Gabriel Benigno Rocha, Richelle Kim Mota Bahia');
-*/
-}
+  print('-----------JSON DATA---------');
+  test.load('example_files/example_xml.xml');
+  print('Test fields: ${test.fields}\n');
+  print('Get data: ${test.data}\n');
+  print('has data: ${test.hasData}\n');
 
-void programFunction(){
-  programFunctionNoErrors();
-  print('--------TESTE COM ERROS-------');
-  jsonFunctionError();
+  print('set data: <record id="7015" name="Roberto Carlos da Nóbrega" email="desouzaveras@email.com" phone="65930041685"/>\n');
+  //test.data = '<record id="7015" name="Roberto Carlos da Nóbrega" email="desouzaveras@email.com" phone="65930041685"/>';
+  print('Get data: ${test.data}\n');
+
+  print('Test.clear()');
+  //test.clear();
+  print('has data: ${test.hasData}\n');
+  print('Get data: ${test.data}\n');
+
+  test.save('teste.xml');
+  
 }

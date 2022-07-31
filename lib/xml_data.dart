@@ -5,14 +5,12 @@ class XmlData extends Data {
 
   @override
   void load(xmlfile) {
-    final content = File(xmlfile).readAsStringSync(); // lendo o arquivo
+    content = File(xmlfile).readAsStringSync(); // lendo o arquivo
     final xmlDoc = XmlDocument.parse(content);
     final records = xmlDoc.findAllElements('record');
-
     for (XmlElement record in records) {
       for (var element in record.attributes) {
         mapRecord[element.name.toString()] = element.value;
-       
       }
       print(mapRecord);
     }

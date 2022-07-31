@@ -2,6 +2,7 @@ library imports;
 
 import 'dart:io';
 import 'dart:convert';
+import 'package:xml/xml.dart';
 
 part 'data.dart';
 part 'delimited_data.dart';

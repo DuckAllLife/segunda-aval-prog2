@@ -59,8 +59,7 @@ void jsonFunction(){
   print('Get data: ${test.data}\n');
   print('has data: ${test.hasData}\n');
 
-  test.data = null;
-  //print('set data: {"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}\n');
+  print('set data: {"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}\n');
   //test.data = '{"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}';
   print('Get data: ${test.data}\n');
 
@@ -71,6 +70,11 @@ void jsonFunction(){
 
   test.save('teste.json');
 }
+
+void xmlFunction(){
+  
+}
+
 void jsonFunctionError(){
   final test = JsonData();
   print('-----------JSON DATA---------');
@@ -80,8 +84,6 @@ void jsonFunctionError(){
   print('has data: ${test.hasData}\n');
 
   test.data = '12132dasd, adasd12312';
-  //print('set data: {"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}\n');
-  //test.data = '{"id": 2045, "name": "Leonardo Castro Lopes", "email": "leocalopes@email.com", "phone": "21956482310", "CPF": "206.549.487-78"}';
   print('Get data: ${test.data}\n');
 
   print('Test.clear()');

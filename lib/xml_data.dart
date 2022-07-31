@@ -1,6 +1,4 @@
-import 'dart:io';
-import 'package:xml/xml.dart';
-import 'Data.dart';
+part of 'imports.dart';
 
 class XmlData extends Data {
   Map<String, dynamic> mapRecord = {};

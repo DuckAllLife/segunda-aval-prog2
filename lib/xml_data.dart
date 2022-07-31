@@ -18,22 +18,19 @@ class XmlData extends Data {
     }
   }
 
-  @override
   void save(xmlFile) {}
-  
-  @override
-  // TODO: implement data
-  String get data => mapRecord.toString();
+
+  void clear() {
+    mapRecord.clear();
+    hasData;
+    }
+
+  bool get hasData => mapRecord.isNotEmpty;
+
+  String? get data => hasData ? mapRecord.toString() : null;
 
   set data(String? value) => throw UnimplementedError();
-  
-  @override
-  void clear() => mapRecord.clear();
-    
 
-  @override
-  List<String> get fields => mapRecord.keys.toList();
+  List<String> get fields => hasData ? mapRecord.keys.toList() : [];
 
-  @override
-  bool get hasData => mapRecord.isNotEmpty;
 }

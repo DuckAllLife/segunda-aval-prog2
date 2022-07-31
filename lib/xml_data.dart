@@ -13,12 +13,16 @@ class XmlData extends Data {
     final records = xmlDoc.findAllElements('record');
 
     for (XmlElement record in records){
-
       for (var element in record.attributes){
         mapRecord[element.name.toString()] = element.value;
       }
       print(mapRecord);
     }
+  }
+
+  @override
+  void save(xmlFile) {
+    
   }
   
   @override
@@ -33,10 +37,9 @@ class XmlData extends Data {
   }
   
   @override
-  // TODO: implement fields
-  List<String> get fields => throw UnimplementedError();
+  List<String> get fields => mapRecord.keys.toList();
+  
   
   @override
-  // TODO: implement hasData
-  bool get hasData => throw UnimplementedError();
+  bool get hasData => mapRecord.isNotEmpty;
 }

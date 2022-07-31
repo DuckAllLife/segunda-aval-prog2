@@ -21,15 +21,13 @@ class XmlData extends Data {
   }
 
   @override
-  void save(xmlFile) {
-    
-  }
+  void save(xmlFile) {}
   
   @override
   // TODO: implement data
-  String get data => throw UnimplementedError();
+  String get data => mapRecord.toString();
 
-  set data(value) => throw UnimplementedError();
+  set data(String value) => throw UnimplementedError();
   
   @override
   void clear() {

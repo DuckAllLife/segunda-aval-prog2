@@ -6,8 +6,9 @@ void main() {
   XmlData test = XmlData();
   //CsvData test = CsvData();
   test.load('example_files/example_xml.xml');
-  print(test.hasData);
-  print(test.fields);
+ // print(test.hasData);
+  //print(test.fields);
+  //print(test.data);
   
 
   print(

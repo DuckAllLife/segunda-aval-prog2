@@ -13,7 +13,10 @@ class JsonData extends Data {
     File(fileName).writeAsStringSync(encoder.convert(dataJson));
   }
 
-  void clear() => dataJson.clear();
+  void clear() {
+    dataJson.clear(); 
+    hasData;
+  }
 
   bool get hasData => dataJson.isNotEmpty;
 
@@ -37,5 +40,5 @@ class JsonData extends Data {
     }
   }
 
-  List<String> get fields => dataJson[0].keys.toList();
+  List<String> get fields => hasData ? dataJson[0].keys.toList() : [];
 }

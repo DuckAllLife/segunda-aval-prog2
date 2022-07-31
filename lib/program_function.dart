@@ -80,7 +80,7 @@ void xmlFunction(){
   print('has data: ${test.hasData}\n');
 
   print('set data: <record id="7015" name="Roberto Carlos da Nóbrega" email="desouzaveras@email.com" phone="65930041685"/>\n');
-  //test.data = '<record id="7015" name="Roberto Carlos da Nóbrega" email="desouzaveras@email.com" phone="65930041685"/>';
+  test.data = '<record id="7015" name="Roberto Carlos da Nóbrega" email="desouzaveras@email.com" phone="65930041685"/>';
   print('Get data: ${test.data}\n');
 
   print('Test.clear()');
@@ -88,6 +88,6 @@ void xmlFunction(){
   print('has data: ${test.hasData}\n');
   print('Get data: ${test.data}\n');
 
-  test.save('teste.xml');
+  test.save('example_files/example_xml.xml');
   
 }

@@ -22,22 +22,13 @@ class XmlData extends Data {
 
   @override
   void save(xmlFile) {}
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 88c868d8260ae9ac4aaba4621c6e8de3fd63565f
   @override
   // TODO: implement data
   String get data => mapRecord.toString();
 
-<<<<<<< HEAD
   set data(String value) => throw UnimplementedError();
   
-=======
-  set data(value) => throw UnimplementedError();
-
->>>>>>> 88c868d8260ae9ac4aaba4621c6e8de3fd63565f
   @override
   void clear() => mapRecord.clear();
     

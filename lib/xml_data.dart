@@ -27,7 +27,7 @@ class XmlData extends Data {
   // TODO: implement data
   String get data => mapRecord.toString();
 
-  set data(String value) => throw UnimplementedError();
+  set data(String? value) => throw UnimplementedError();
   
   @override
   void clear() => mapRecord.clear();

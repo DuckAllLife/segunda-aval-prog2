@@ -5,7 +5,7 @@ void programFunction(){
     csvFunction();
     tsvFunction();
     jsonFunction();
-    //xmlFunction();
+    xmlFunction();
   }
 
 void csvFunction(){

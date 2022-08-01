@@ -73,7 +73,7 @@ void jsonFunction(){
 
 void xmlFunction(){
   final test = XmlData();
-  print('-----------JSON DATA---------');
+  print('-----------XML DATA---------');
   test.load('example_files/example_xml.xml');
   print('Test fields: ${test.fields}\n');
   print('Get data: ${test.data}\n');

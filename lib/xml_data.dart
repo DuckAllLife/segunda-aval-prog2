@@ -12,7 +12,6 @@ class XmlData extends Data {
       for (var element in record.attributes) {
         mapRecord[element.name.toString()] = element.value;
       }
-      print(mapRecord);
     }
   }
 
